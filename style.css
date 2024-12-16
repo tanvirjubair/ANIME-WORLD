@@ -118,6 +118,126 @@ header h1 {
     transform: scale(1.05);
 }
 
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #1b1f27, #2e2e3d);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ff8800;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #ff8800;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 500px;
+    background: url('anime-hero.jpg') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* Grid Section */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+
+.grid-item {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.grid-item h3 {
+    margin: 0;
+    color: #ff8800;
+    font-size: 1.5em;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
 /* Quotes Section */
 .quotes {
     text-align: center;
@@ -134,7 +254,10 @@ header h1 {
     font-size: 1.2em;
     line-height: 1.5;
 }
-
+.grid-item:hover .quote {
+    opacity: 1; /* Show quote */
+    transform: translateY(0);
+}
 /* Signature */
 footer {
     text-align: right;
@@ -148,6 +271,41 @@ footer {
     animation: fadeIn 3s ease-in-out;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Signature */
+footer {
+    text-align: right;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.signature {
+    font-family: 'Orbitron', sans-serif; /* Robotic font */
+    font-size: 2.5em;
+    color: #ff8800;
+    animation: typing 4s steps(22) infinite, blink 0.5s step-end infinite;
+    border-right: 3px solid #ff8800;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Outline effect for text */
+.signature::before {
+    content: attr(data-text); /* Use the text inside the element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    -webkit-text-stroke: 2px #000; /* Bold outline */
+    z-index: -1;
+}
+
+/* Typing Animation */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
