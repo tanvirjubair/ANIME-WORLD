@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime World - Professional Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Sacramento&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>Anime World</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Quotes</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to the World of Anime</h2>
+            <p>Explore the stories, characters, and quotes that inspire us all.</p>
+        </div>
+    </section>
+
+    <!-- ANIME CHARACTERS GRID -->
+    <section class="grid-container">
+        <div class="grid-item" style="background-image: url('naruto.jpg');">
+            <h3>Naruto Uzumaki</h3>
+        </div>
+        <div class="grid-item" style="background-image: url('luffy.jpg');">
+            <h3>Monkey D. Luffy</h3>
+        </div>
+        <div class="grid-item" style="background-image: url('goku.jpg');">
+            <h3>Son Goku</h3>
+        </div>
+        <div class="grid-item" style="background-image: url('eren.jpg');">
+            <h3>Eren Yeager</h3>
+        </div>
+        <div class="grid-item" style="background-image: url('ichigo.jpg');">
+            <h3>Ichigo Kawasakhi</h3>
+        </div>
+        <div class="grid-item" style="background-image: url('gojo.jpg');">
+            <h3>Saturo Gojo</h3>
+        </div>
+        
+    </section>
+<!-- INSPIRATIONAL QUOTES -->
+<section class="quotes">
+    <h2>Inspirational Quotes</h2>
+    <p>"A lesson without pain is meaningless." – <span>Edward Elric</span></p>
+    <p>"Power comes in response to a need, not a desire." – <span>Goku</span></p>
+    <p>"I'm going to be king of the pirates!" – <span>Luffy</span></p>
+    <p>"When you give up, that’s when the game is over." – <span>Misaki Ayuzawa</span></p>
+
+        <footer>
+            <p class="signature" data-text="TANVIR JUBAIR">TANVIR JUBAIR</p>
+        </footer>
+    
+    <!-- JavaScript for Menu -->
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu').classList.toggle('show');
+        }
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
